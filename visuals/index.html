@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>TimeDensity — Визуализации / Visuals</title>
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    function switchLang(lang) {
+      document.getElementById("ru").style.display = lang === "ru" ? "block" : "none";
+      document.getElementById("en").style.display = lang === "en" ? "block" : "none";
+    }
+  </script>
+</head>
+
+<body>
+
+  <a href="../index.html">
+    <img src="../img/logo.png" alt="TimeDensity logo" class="logo">
+  </a>
+
+  <nav class="nav">
+    <a href="../index.html">Главная / Home</a>
+    <a href="../faq/index.html">FAQ</a>
+    <a href="../theory/index.html">Теория / Theory</a>
+    <a href="../visuals/index.html">Визуализации / Visuals</a>
+    <a href="../docs/index.html">Документы / Docs</a>
+  </nav>
+
+  <div class="lang-switch">
+    <button onclick="switchLang('ru')">RU</button>
+    <button onclick="switchLang('en')">EN</button>
+  </div>
+
+  <div class="page-container">
+
+    <div id="ru">
+      <h1>Визуализации TimeDensity</h1>
+      <p>Здесь будут диаграммы, схемы и анимации, иллюстрирующие плотность, поток и искривление времени.</p>
+    </div>
+
+    <div id="en" style="display:none;">
+      <h1>TimeDensity visuals</h1>
+      <p>This section will contain diagrams, schematics, and animations illustrating time density, flow, and curvature.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
