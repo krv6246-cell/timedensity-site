@@ -35,7 +35,20 @@ h1, h2 {
     display: flex;
     align-items: center;
 }
+/* ====== LOGO (SVG) ====== */
+.logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 6px #8b5cf6);
+    transition: 0.3s ease;
+    user-select: none;
+}
 
+.logo-img:hover {
+    filter: drop-shadow(0 0 12px #a78bfa);
+    transform: scale(1.05);
+}
 .logo-text {
     font-size: 28px;
     font-weight: 700;
