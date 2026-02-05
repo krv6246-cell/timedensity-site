@@ -37,7 +37,7 @@ h1, h2 {
 }
 /* ====== LOGO (SVG) ====== */
 .logo-img {
-    height: 42px;
+    height: 64px;
     width: auto;
     display: block;
     filter: drop-shadow(0 0 6px #8b5cf6);
