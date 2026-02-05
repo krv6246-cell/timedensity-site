@@ -2,58 +2,60 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>TimeDensity FAQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeDensity</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
+
 <body>
 
-<div class="container">
-    <header>
-        <div class="logo">TimeDensity</div>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="left-block">
+            <div class="logo-text">TimeDensity</div>
+        </div>
+
         <div class="lang-switch">
-            <button id="btnLangRu" class="active" onclick="setLang('ru')">RU</button>
-            <button id="btnLangEn" onclick="setLang('en')">EN</button>
-        </div> <!-- закрыли lang-switch -->
+            <button id="btnLangRu" class="lang-btn active" onclick="setLang('ru')">RU</button>
+            <button id="btnLangEn" class="lang-btn" onclick="setLang('en')">EN</button>
+        </div>
     </header>
 
-    <div style="text-align: center; margin: 1.2rem 0 2.5rem;">
-        <a href="https://krv6246-cell.github.io/timedensity-site/"
-           target="_blank"
-           class="donate-btn"
-           style="font-size: 1.05rem; padding: 0.85rem 2.2rem; letter-spacing: 0.6px;">
-            На главную TimeDensity
-        </a>
-    </div>
+    <!-- CONCEPT BLOCK -->
+    <section class="concept-block">
+        <h2>TimeDensity — новая физическая модель времени</h2>
+        <p>
+            TimeDensity рассматривает время как физическую среду с собственной плотностью,
+            потоком и внутренней динамикой. Это фундаментальная основа, объясняющая структуру
+            пространства, гравитацию и эволюцию Вселенной.
+        </p>
+    </section>
 
-    <h1>TimeDensity / TimeMechanics FAQ</h1>
-    <div class="subtitle">Многоуровневая структура вопросов и ответов о плотности времени</div>
+    <!-- MAIN CONTENT -->
+    <main>
+        <h2>TimeDensity / TimeMechanics FAQ</h2>
+        <div class="subtitle">Многоуровневая структура вопросов и ответов о плотности времени</div>
 
-    <div id="app">
-        <h2 class="section-title">Уровни</h2>
-        <div id="levelList"></div>
-
-        <div id="questionsSection" style="display:none;">
-            <h2 class="section-title">Вопросы уровня</h2>
-            <div class="breadcrumbs">Уровень: <span id="currentLevelName"></span></div>
-            <div id="questionList"></div>
-            <button class="back-btn" onclick="backToLevels()">← Назад к уровням</button>
+        <div class="levels">
+            <button onclick="openLevel(1)">Уровень 1</button>
+            <button onclick="openLevel(2)">Уровень 2</button>
+            <button onclick="openLevel(3)">Уровень 3</button>
+            <button onclick="openLevel(4)">Уровень 4</button>
+            <button onclick="openLevel(5)">Уровень 5</button>
+            <button onclick="openLevel(6)">Уровень 6</button>
+            <button onclick="openLevel(7)">Уровень 7</button>
+            <button onclick="openLevel(8)">Уровень 8</button>
+            <button onclick="openLevel(9)">Уровень 9</button>
+            <button onclick="openLevel(10)">Уровень 10</button>
         </div>
+    </main>
 
-        <div id="answerSection" style="display:none;">
-            <h2 class="section-title">Ответ</h2>
-            <div class="breadcrumbs">
-                Уровень: <span id="answerLevelName"></span> · Вопрос: <span id="answerQuestionText"></span>
-            </div>
-            <div class="answer-box" id="answerBox"></div>
-            <button class="back-btn" onclick="backToQuestions()">← Назад к вопросам</button>
-        </div>
+    <!-- DONATE -->
+    <div class="donate-container">
+        <a href="#" class="donate-button">DONATE</a>
     </div>
 
-    <div class="donate-wrapper">
-        <a href="#" class="donate-btn">DONATE</a>
-    </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
