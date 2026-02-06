@@ -226,7 +226,20 @@ main {
   animation: brandGlow 6s ease-in-out infinite alternate;
   border-radius: 50%; /* полностью круглая форма */
 }
-
+/* ====== CENTRAL CONCEPT TEXT ====== */
+.td-concept {
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform: translateX(-50%);
+    width: 650px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.45;
+    color: #e0eaff;
+    text-shadow: 0 0 12px rgba(0, 150, 255, 0.6);
+    font-weight: 300;
+}
 
 @keyframes brandGlow {
     from {
