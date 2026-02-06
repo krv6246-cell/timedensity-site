@@ -221,10 +221,10 @@ main {
     padding-left: 40px;          /* красивый отступ слева */
 }
 .brand-logo {
-    width: 420px;
-    filter: drop-shadow(0 0 25px rgba(0, 150, 255, 0.7));
-    animation: brandGlow 6s ease-in-out infinite alternate;
-    border-radius: 30px; /* мягкие покатые углы */
+  width: 420px;
+  filter: drop-shadow(0 0 25px rgba(0, 150, 255, 0.7));
+  animation: brandGlow 6s ease-in-out infinite alternate;
+  border-radius: 50%; /* полностью круглая форма */
 }
 
 
