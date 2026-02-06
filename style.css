@@ -120,8 +120,10 @@ h1, h2 {
 /* ====== MAIN CONTENT ====== */
 main {
     max-width: 900px;
-    margin: 40px auto;      /* центрируем основной блок */
-    text-align: left;       /* чтобы кнопки были слева */
+    margin: 0;              /* убираем центрирование */
+    padding-left: 40px;     /* смещаем влево под логотип */
+    padding-top: 40px;      /* поднимаем под шапку */
+    text-align: left;
 }
 
 /* Заголовок блока */
