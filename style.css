@@ -173,8 +173,9 @@ main {
 
 /* ====== DONATE ====== */
 .donate-container {
-    text-align: center;
-    margin: 50px 0;
+    position: absolute;
+    right: 80px;     /* выравниваем по правой колонке */
+    top: 600px;      /* ставим под блок разделов */
 }
 
 .donate-button {
