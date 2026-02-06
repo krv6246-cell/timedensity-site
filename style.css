@@ -220,12 +220,13 @@ main {
     align-items: center;
     padding-left: 40px;          /* красивый отступ слева */
 }
-
 .brand-logo {
-    width: 420px; /* можно увеличить до 500–600 */
+    width: 420px;
     filter: drop-shadow(0 0 25px rgba(0, 150, 255, 0.7));
     animation: brandGlow 6s ease-in-out infinite alternate;
+    border-radius: 30px; /* мягкие покатые углы */
 }
+
 
 @keyframes brandGlow {
     from {
