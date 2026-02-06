@@ -181,3 +181,23 @@ main {
         padding: 12px 0;
     }
 }
+.brand-logo-block {
+    display: flex;
+    justify-content: flex-end; /* выравнивание справа */
+    margin: 20px 40px 0 0; /* отступ сверху и справа */
+}
+
+.brand-logo {
+    width: 420px; /* можно увеличить до 500–600 */
+    filter: drop-shadow(0 0 25px rgba(0, 150, 255, 0.7));
+    animation: brandGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes brandGlow {
+    from {
+        filter: drop-shadow(0 0 15px rgba(0, 150, 255, 0.4));
+    }
+    to {
+        filter: drop-shadow(0 0 35px rgba(0, 200, 255, 0.9));
+    }
+}
