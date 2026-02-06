@@ -119,10 +119,10 @@ h1, h2 {
 
 /* ====== MAIN CONTENT ====== */
 main {
+    position: absolute;
+    top: 140px;     /* расстояние от верхней шапки */
+    right: 40px;    /* выравниваем под логотип справа */
     max-width: 900px;
-    margin: 0;              /* убрали отступ сверху */
-    padding-left: 40px;     /* выравниваем под логотип */
-    padding-top: 0;         /* поднимаем максимально вверх */
     text-align: left;
 }
 
