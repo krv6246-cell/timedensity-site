@@ -215,8 +215,9 @@ main {
 }
 .brand-logo-block {
     display: flex;
-    justify-content: flex-end; /* выравнивание справа */
-    margin: 20px 40px 0 0; /* отступ сверху и справа */
+    justify-content: flex-start; /* логотип слева */
+    align-items: center;
+    padding-left: 40px;          /* красивый отступ слева */
 }
 
 .brand-logo {
