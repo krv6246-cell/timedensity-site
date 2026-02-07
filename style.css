@@ -4,21 +4,10 @@ body {
     padding: 0;
     font-family: "Inter", Arial, sans-serif;
     color: #ffffff;
-    line-height: 1.6;
-
     background-image: url("img/galaxy.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
-
-    animation: galaxyMove 40s ease-in-out infinite alternate;
-}
-
-h1, h2 {
-    margin: 0;
-    padding: 0;
-    font-weight: 600;
 }
 
 /* ====== HEADER ====== */
@@ -31,21 +20,31 @@ h1, h2 {
     border-bottom: 1px solid #222;
 }
 
-.left-block {
-    display: flex;
-    align-items: center;
+.logo-img {
+    height: 64px;
+    filter: drop-shadow(0 0 6px #8b5cf6);
 }
 
 .site-title {
     font-size: 32px;
     font-weight: 600;
-    color: white;
-    letter-spacing: 1px;
     text-shadow: 0 0 10px rgba(0, 150, 255, 0.7);
-    margin: 0 auto;
 }
 
-/* ====== LOGO ====== */
+.lang-switch button {
+    padding: 8px 16px;
+    background: #2a2a2a;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.lang-btn.active {
+    background: #8b5cf6;
+}
+
+/* ====== MAIN LOGO ====== */
 .brand-logo-block {
     display: flex;
     justify-content: center;
@@ -54,41 +53,36 @@ h1, h2 {
 
 .brand-logo {
     width: 300px;
-    max-width: 90%;
     border-radius: 50%;
     filter: drop-shadow(0 0 25px rgba(0, 150, 255, 0.7));
-    animation: brandGlow 6s ease-in-out infinite alternate;
 }
 
-/* ====== CENTRAL CONCEPT TEXT ====== */
+/* ====== CENTRAL TEXT ====== */
 .td-concept {
     position: absolute;
-    left: 50%;
     top: 180px;
+    left: 50%;
     transform: translateX(-50%);
     width: 520px;
     text-align: center;
     font-size: 19px;
     line-height: 1.4;
-    color: #e0eaff;
     text-shadow: 0 0 12px rgba(0, 150, 255, 0.6);
-    font-weight: 300;
 }
 
-/* ====== MAIN CONTENT ====== */
+/* ====== MAIN CONTENT (RIGHT COLUMN) ====== */
 main {
     position: relative;
-    margin-top: 380px; /* чтобы не наезжать на концепт */
-    padding: 0 40px;
+    margin-top: 380px;
+    margin-left: auto;
+    margin-right: 40px;
+    max-width: 900px;
 }
 
 .sections-title {
     font-size: 28px;
     font-weight: 700;
-    color: white;
-    letter-spacing: 0.5px;
     text-shadow: 0 0 12px rgba(0, 150, 255, 0.7);
-    margin-bottom: 20px;
 }
 
 /* ====== BUTTON GRID ====== */
@@ -98,28 +92,23 @@ main {
     gap: 16px 24px;
 }
 
-/* СТИЛИ ДЛЯ <a> КАК КНОПОК */
 .level-btn {
     display: block;
     width: 200px;
     padding: 12px 0;
-    font-size: 17px;
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    color: white;
     border-radius: 8px;
     text-align: center;
+    color: white;
     text-decoration: none;
-    cursor: pointer;
-    backdrop-filter: blur(4px);
-    transition: 0.25s ease;
+    transition: 0.25s;
 }
 
 .level-btn:hover {
     background: rgba(0, 0, 0, 0.65);
     border-color: #0af;
     box-shadow: 0 0 12px rgba(0,150,255,0.5);
-    transform: translateY(-2px);
 }
 
 /* ====== DONATE ====== */
@@ -129,78 +118,10 @@ main {
 }
 
 .donate-button {
-    display: inline-block;
     padding: 14px 32px;
     background-color: #8b5cf6;
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
     border-radius: 12px;
+    color: white;
     text-decoration: none;
-    transition: 0.25s;
-}
-
-.donate-button:hover {
-    background-color: #a78bfa;
-    transform: translateY(-3px);
-}
-
-/* ====== MOBILE (до 600px) ====== */
-@media (max-width: 600px) {
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .site-header {
-        padding: 16px 20px;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .brand-logo {
-        max-width: 200px;
-    }
-
-    .td-concept {
-        position: static;
-        transform: none;
-        width: auto;
-        margin-top: 20px;
-        padding: 0 15px;
-        font-size: 17px;
-    }
-
-    main {
-        margin-top: 40px;
-        padding: 0 15px;
-    }
-
-    .levels {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .level-btn {
-        width: 100%;
-        font-size: 16px;
-        padding: 14px 0;
-    }
-
-    .donate-container {
-        text-align: center;
-        margin-top: 30px;
-    }
-}
-
-/* ====== LOGO GLOW ====== */
-@keyframes brandGlow {
-    from {
-        filter: drop-shadow(0 0 15px rgba(0, 150, 255, 0.4));
-    }
-    to {
-        filter: drop-shadow(0 0 35px rgba(0, 200, 255, 0.9));
-    }
+    font-size: 18px;
 }
