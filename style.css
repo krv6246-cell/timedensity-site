@@ -21,13 +21,6 @@ h1, h2 {
     font-weight: 600;
 }
 
-.subtitle {
-    margin-top: 10px;
-    font-size: 18px;
-    opacity: 0.8;
-    text-align: center;
-}
-
 /* ====== HEADER ====== */
 .site-header {
     display: flex;
@@ -41,116 +34,73 @@ h1, h2 {
 .left-block {
     display: flex;
     align-items: center;
-}.site-title {
+}
+
+.site-title {
     font-size: 32px;
     font-weight: 600;
     color: white;
     letter-spacing: 1px;
     text-shadow: 0 0 10px rgba(0, 150, 255, 0.7);
     margin: 0 auto;
+}
+
+/* ====== LOGO ====== */
+.brand-logo-block {
     display: flex;
-    align-items: center;
-}
-/* ====== LOGO (SVG) ====== */
-.logo-img {
-    height: 64px;
-    width: auto;
-    display: block;
-    filter: drop-shadow(0 0 6px #8b5cf6);
-    transition: 0.3s ease;
-    user-select: none;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.logo-img:hover {
-    filter: drop-shadow(0 0 12px #a78bfa);
-    transform: scale(1.05);
-}
-.logo-text {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+.brand-logo {
+    width: 300px;
+    max-width: 90%;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 25px rgba(0, 150, 255, 0.7));
+    animation: brandGlow 6s ease-in-out infinite alternate;
 }
 
-/* ====== LANGUAGE SWITCH ====== */
-.lang-switch {
-    display: flex;
-    gap: 10px;
-}
-
-.lang-btn {
-    padding: 8px 16px;
-    background: #2a2a2a;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 15px;
-    transition: 0.2s;
-}
-
-.lang-btn:hover {
-    background: #3a3a3a;
-}
-
-.lang-btn.active {
-    background: #8b5cf6;
-}
-
-/* ====== CONCEPT BLOCK ====== */
-.concept-block {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 14px;
-    backdrop-filter: blur(6px);
+/* ====== CENTRAL CONCEPT TEXT ====== */
+.td-concept {
+    position: absolute;
+    left: 50%;
+    top: 180px;
+    transform: translateX(-50%);
+    width: 520px;
     text-align: center;
-}
-
-.concept-block h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.concept-block p {
-    font-size: 18px;
-    opacity: 0.9;
+    font-size: 19px;
+    line-height: 1.4;
+    color: #e0eaff;
+    text-shadow: 0 0 12px rgba(0, 150, 255, 0.6);
+    font-weight: 300;
 }
 
 /* ====== MAIN CONTENT ====== */
 main {
-    position: absolute;
-    top: 140px;     /* расстояние от верхней шапки */
-    right: 40px;    /* выравниваем под логотип справа */
-    max-width: 900px;
-    text-align: left;
+    position: relative;
+    margin-top: 380px; /* чтобы не наезжать на концепт */
+    padding: 0 40px;
 }
 
-/* Заголовок блока */
 .sections-title {
-    margin-left: 40px;
-    margin-top: 0px;
-    margin-bottom: 10px;
     font-size: 28px;
     font-weight: 700;
     color: white;
     letter-spacing: 0.5px;
     text-shadow: 0 0 12px rgba(0, 150, 255, 0.7);
+    margin-bottom: 20px;
 }
 
-/* Сетка кнопок: 2 столбца × 5 строк */
+/* ====== BUTTON GRID ====== */
 .levels {
     display: grid;
-    grid-template-columns: 200px 200px; /* два ровных столбца */
-    grid-auto-rows: auto;
-    row-gap: 14px;      /* вертикальный отступ */
-    column-gap: 24px;   /* горизонтальный отступ */
-    margin-left: 40px;  /* перенос в левый угол */
-    margin-top: 30px;   /* отступ под заголовком */
+    grid-template-columns: 200px 200px;
+    gap: 16px 24px;
 }
 
-/* Стиль кнопок */
-.levels button {
+/* СТИЛИ ДЛЯ <a> КАК КНОПОК */
+.level-btn {
+    display: block;
     width: 200px;
     padding: 12px 0;
     font-size: 17px;
@@ -158,13 +108,14 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: white;
     border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
     backdrop-filter: blur(4px);
     transition: 0.25s ease;
 }
 
-/* Ховер‑эффект */
-.levels button:hover {
+.level-btn:hover {
     background: rgba(0, 0, 0, 0.65);
     border-color: #0af;
     box-shadow: 0 0 12px rgba(0,150,255,0.5);
@@ -173,9 +124,8 @@ main {
 
 /* ====== DONATE ====== */
 .donate-container {
-    position: absolute;
-    right: 80px;     /* выравниваем по правой колонке */
-    top: 600px;      /* ставим под блок разделов */
+    margin-top: 40px;
+    text-align: right;
 }
 
 .donate-button {
@@ -195,89 +145,57 @@ main {
     transform: translateY(-3px);
 }
 
-/* ====== MOBILE FIX (до 600px) ====== */
+/* ====== MOBILE (до 600px) ====== */
 @media (max-width: 600px) {
 
-    /* Общие правила */
     body {
         overflow-x: hidden;
-        padding: 0;
-        margin: 0;
     }
 
-    /* Шапка */
     .site-header {
         padding: 16px 20px;
-        text-align: center;
         flex-direction: column;
         gap: 10px;
-    }
-
-    /* Логотип */
-    .brand-logo-block {
-        justify-content: center;
-        padding-left: 0;
+        text-align: center;
     }
 
     .brand-logo {
-        width: 100%;
-        max-width: 260px;
-        border-radius: 50%;
-        margin: 0 auto;
+        max-width: 200px;
     }
 
-    /* Центральный текст концепции */
     .td-concept {
-        position: static;      /* убираем absolute */
+        position: static;
         transform: none;
+        width: auto;
         margin-top: 20px;
-        text-align: center;
+        padding: 0 15px;
+        font-size: 17px;
+    }
+
+    main {
+        margin-top: 40px;
         padding: 0 15px;
     }
 
-    /* Блоки концепции */
-    .concept-block {
-        padding: 18px;
-        margin: 15px 10px;
-        font-size: 16px;
-    }
-
-    /* Кнопки уровней */
     .levels {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        padding: 0 15px;
+        gap: 12px;
     }
 
-    .levels button {
+    .level-btn {
         width: 100%;
         font-size: 16px;
         padding: 14px 0;
     }
 
-    /* Любые абсолютные элементы */
-    .absolute-block {
-        position: static !important;
-        transform: none !important;
-        margin-top: 20px;
+    .donate-container {
+        text-align: center;
+        margin-top: 30px;
     }
 }
-/* ====== CENTRAL CONCEPT TEXT ====== */
-.td-concept {
-    position: absolute;
-    left: 50%;
-    top: 300px;
-    transform: translateX(-50%);
-    width: 650px;
-    text-align: center;
-    font-size: 22px;
-    line-height: 1.45;
-    color: #e0eaff;
-    text-shadow: 0 0 12px rgba(0, 150, 255, 0.6);
-    font-weight: 300;
-}
 
+/* ====== LOGO GLOW ====== */
 @keyframes brandGlow {
     from {
         filter: drop-shadow(0 0 15px rgba(0, 150, 255, 0.4));
