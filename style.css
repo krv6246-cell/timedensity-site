@@ -195,36 +195,73 @@ main {
     transform: translateY(-3px);
 }
 
-/* ====== MOBILE ====== */
+/* ====== MOBILE FIX (до 600px) ====== */
 @media (max-width: 600px) {
+
+    /* Общие правила */
+    body {
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Шапка */
     .site-header {
-        padding: 18px 20px;
+        padding: 16px 20px;
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .logo-text {
-        font-size: 22px;
+    /* Логотип */
+    .brand-logo-block {
+        justify-content: center;
+        padding-left: 0;
     }
 
+    .brand-logo {
+        width: 100%;
+        max-width: 260px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    /* Центральный текст концепции */
+    .td-concept {
+        position: static;      /* убираем absolute */
+        transform: none;
+        margin-top: 20px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    /* Блоки концепции */
     .concept-block {
-        padding: 22px;
+        padding: 18px;
+        margin: 15px 10px;
+        font-size: 16px;
+    }
+
+    /* Кнопки уровней */
+    .levels {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 15px;
     }
 
     .levels button {
-        font-size: 15px;
-        padding: 12px 0;
+        width: 100%;
+        font-size: 16px;
+        padding: 14px 0;
     }
-}
-.brand-logo-block {
-    display: flex;
-    justify-content: flex-start; /* логотип слева */
-    align-items: center;
-    padding-left: 40px;          /* красивый отступ слева */
-}
-.brand-logo {
-  width: 420px;
-  filter: drop-shadow(0 0 25px rgba(0, 150, 255, 0.7));
-  animation: brandGlow 6s ease-in-out infinite alternate;
-  border-radius: 50%; /* полностью круглая форма */
+
+    /* Любые абсолютные элементы */
+    .absolute-block {
+        position: static !important;
+        transform: none !important;
+        margin-top: 20px;
+    }
 }
 /* ====== CENTRAL CONCEPT TEXT ====== */
 .td-concept {
