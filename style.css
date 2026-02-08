@@ -73,9 +73,9 @@ body {
 
 /* ====== MAIN LOGO ====== */
 .brand-logo-block {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    display: block;
+    margin-left: 40px;
+    margin-top: 40px;
 }
 
 .brand-logo {
