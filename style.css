@@ -10,6 +10,7 @@ body {
     background-attachment: fixed;
 }
 
+
 /* ====== HEADER ====== */
 .site-header {
     display: flex;
@@ -44,6 +45,32 @@ body {
     background: #8b5cf6;
 }
 
+
+/* ====== PAGE LAYOUT (TWO COLUMNS) ====== */
+.page-layout {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.left-column {
+    width: calc(100% - 420px);
+    min-height: 100vh;
+    position: relative;
+}
+
+.right-column {
+    width: 420px;
+    min-width: 420px;
+    max-width: 420px;
+    padding-right: 40px;
+    position: relative;
+}
+
+
 /* ====== MAIN LOGO ====== */
 .brand-logo-block {
     display: flex;
@@ -56,6 +83,7 @@ body {
     border-radius: 50%;
     filter: drop-shadow(0 0 25px rgba(0, 150, 255, 0.7));
 }
+
 
 /* ====== CENTRAL TEXT ====== */
 .td-concept {
@@ -70,20 +98,15 @@ body {
     text-shadow: 0 0 12px rgba(0, 150, 255, 0.6);
 }
 
-/* ====== MAIN CONTENT (RIGHT COLUMN) ====== */
-main {
-    position: relative;
-    margin-top: 380px;
-    margin-left: auto;
-    margin-right: 40px;
-    max-width: 900px;
-}
 
+/* ====== RIGHT COLUMN CONTENT ====== */
 .sections-title {
     font-size: 28px;
     font-weight: 700;
+    margin-bottom: 20px;
     text-shadow: 0 0 12px rgba(0, 150, 255, 0.7);
 }
+
 
 /* ====== BUTTON GRID ====== */
 .levels {
@@ -111,7 +134,8 @@ main {
     box-shadow: 0 0 12px rgba(0,150,255,0.5);
 }
 
-/* ====== DONATE ====== */
+
+/* ====== DONATE BUTTON ====== */
 .donate-container {
     margin-top: 40px;
     text-align: right;
