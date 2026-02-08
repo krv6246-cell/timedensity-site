@@ -87,15 +87,37 @@ body {
 
 /* ====== CENTRAL TEXT ====== */
 .td-concept {
-    font-size: 18px;
-    line-height: 1.45;
+    font-size: 19px;
+    line-height: 1.5;
     color: #ffffff;
     text-align: center;
-    max-width: 700px;
-    margin: 20px auto 25px auto;
-    padding: 0 20px;
+    max-width: 760px;
+
+    /* Идеальные отступы для композиции */
+    margin: 55px auto 45px auto;
+    padding: 0 25px;
+
     font-weight: 300;
-    opacity: 0.95;
+    opacity: 0;
+
+    /* Мягкое космическое свечение */
+    text-shadow: 
+        0 0 14px rgba(127, 199, 255, 0.45),
+        0 0 28px rgba(127, 199, 255, 0.25);
+
+    /* Плавное появление */
+    animation: tdFadeIn 1.4s ease-out forwards;
+}
+
+@keyframes tdFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 0.92;
+        transform: translateY(0);
+    }
 }
 
 
