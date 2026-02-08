@@ -87,15 +87,15 @@ body {
 
 /* ====== CENTRAL TEXT ====== */
 .td-concept {
-    position: absolute;
-    top: 180px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 520px;
+    font-size: 18px;
+    line-height: 1.45;
+    color: #ffffff;
     text-align: center;
-    font-size: 19px;
-    line-height: 1.4;
-    text-shadow: 0 0 12px rgba(0, 150, 255, 0.6);
+    max-width: 700px;
+    margin: 20px auto 25px auto;
+    padding: 0 20px;
+    font-weight: 300;
+    opacity: 0.95;
 }
 
 
