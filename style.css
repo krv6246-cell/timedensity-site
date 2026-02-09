@@ -210,4 +210,18 @@ body {
 .manifest-block strong {
     color: #ffffff;
     font-weight: 600;
+}/* ====== LANGUAGE VISIBILITY ====== */
+
+/* По умолчанию показываем русский */
+.theory-en {
+    display: none;
+}
+
+/* Когда выбран английский */
+html.en .theory-en {
+    display: block;
+}
+
+html.en .theory-ru {
+    display: none;
 }
