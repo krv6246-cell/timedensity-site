@@ -224,4 +224,28 @@ html.en .theory-en {
 
 html.en .theory-ru {
     display: none;
+}/* ====== TOP NAV: HOME BUTTON ====== */
+.td-top-nav {
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    z-index: 2000;
+}
+
+.td-top-nav .home-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    color: #ffffff;
+    padding: 6px 14px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.td-top-nav .home-link:hover {
+    background: rgba(0, 0, 0, 0.65);
+    border-color: #0af;
+    box-shadow: 0 0 12px rgba(0,150,255,0.5);
 }
