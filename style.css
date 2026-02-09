@@ -170,4 +170,44 @@ body {
     color: white;
     text-decoration: none;
     font-size: 18px;
+}/* ====== MANIFEST BLOCK (CENTER COLUMN) ====== */
+.center-column {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.manifest-block {
+    max-width: 760px;
+    padding: 40px 35px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    line-height: 1.65;
+
+    animation: tdFadeIn 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+.manifest-block h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.manifest-block p {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.manifest-block strong {
+    color: #ffffff;
+    font-weight: 600;
 }
