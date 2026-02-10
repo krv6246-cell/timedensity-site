@@ -170,19 +170,18 @@ body {
     color: white;
     text-decoration: none;
     font-size: 18px;
-}/* ====== MANIFEST BLOCK (CENTER COLUMN) ====== */
-.center-column {
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
-}
+}//* ===== HORIZONTAL FULL-WIDTH MANIFEST ===== */
+.manifest-full {
+    width: calc(100% - 200px); /* отступы ~10 см слева и справа */
+    margin: 20px auto 60px auto; /* сверху 1 см, снизу 6 см */
+    padding: 40px 50px;
 
-.manifest-block {
-    max-width: 760px;
-    padding: 40px 35px;
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 18px;
+
+    min-height: 520px; /* примерно 15 см */
+    box-sizing: border-box;
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -194,23 +193,7 @@ body {
     animation: tdFadeIn 1.2s ease-out forwards;
     opacity: 0;
 }
-
-.manifest-block h1 {
-    font-size: 32px;
-    margin-bottom: 25px;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.manifest-block p {
-    margin-bottom: 18px;
-    font-size: 18px;
-}
-
-.manifest-block strong {
-    color: #ffffff;
-    font-weight: 600;
-}/* ====== LANGUAGE VISIBILITY ====== */
+/* ====== LANGUAGE VISIBILITY ====== */
 
 /* По умолчанию показываем русский */
 .theory-en {
@@ -221,9 +204,6 @@ body {
 html.en .theory-en {
     display: block;
 }
-
-html.en .theory-ru {
-    display: none;
 /* ===== TOP NAV CONTAINER ===== */
 .td-top-nav {
     position: absolute;
@@ -284,4 +264,3 @@ html.en .theory-ru {
     color: #fff;
 }
 
-.
