@@ -128,7 +128,26 @@ body {
     margin-bottom: 20px;
     text-shadow: 0 0 12px rgba(0, 150, 255, 0.7);
 }
+/* ===== HOME LINK IN RIGHT COLUMN ===== */
+.right-column .home-link {
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    color: #ffffff;
 
+    padding: 6px 14px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+
+    margin-bottom: 18px;
+    transition: 0.25s;
+}
+
+.right-column .home-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
 
 /* ====== BUTTON GRID ====== */
 .levels {
