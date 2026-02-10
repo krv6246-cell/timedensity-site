@@ -170,22 +170,7 @@ body {
     color: white;
     text-decoration: none;
     font-size: 18px;
-/* ===== HORIZONTAL FULL-WIDTH MANIFEST (CLEAN VERSION) ===== */
-.manifest-full {
-    width: calc(100% - 120px); /* комфортные поля слева и справа */
-    margin: 32px auto 48px auto; /* сбалансированные внешние отступы */
-    padding: 28px 36px; /* удобное внутреннее пространство */
-
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 18px;
-
-    min-height: 300px; /* естественная минимальная высота */
-    box-sizing: border-box;
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
+/
 
 
 /* ====== LANGUAGE VISIBILITY ====== */
