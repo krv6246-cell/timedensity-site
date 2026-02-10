@@ -170,29 +170,24 @@ body {
     color: white;
     text-decoration: none;
     font-size: 18px;
-}/* ===== HORIZONTAL FULL-WIDTH MANIFEST ===== */
+/* ===== HORIZONTAL FULL-WIDTH MANIFEST (CLEAN VERSION) ===== */
 .manifest-full {
-    width: calc(100% - 200px); /* отступы ~10 см слева и справа */
-    margin: 20px auto 60px auto; /* сверху 1 см, снизу 6 см */
-    padding: 40px 50px;
+    width: calc(100% - 120px); /* комфортные поля слева и справа */
+    margin: 32px auto 48px auto; /* сбалансированные внешние отступы */
+    padding: 28px 36px; /* удобное внутреннее пространство */
 
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 18px;
 
-    min-height: 520px; /* примерно 15 см */
+    min-height: 300px; /* естественная минимальная высота */
     box-sizing: border-box;
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.35);
-    color: #ffffff;
-    line-height: 1.65;
-
-    animation: tdFadeIn 1.2s ease-out forwards;
-    opacity: 0;
 }
+
+
 /* ====== LANGUAGE VISIBILITY ====== */
 
 /* По умолчанию показываем русский */
@@ -263,4 +258,3 @@ html.en .theory-en {
 .td-top-nav .lang-switch a:hover {
     color: #fff;
 }
-
