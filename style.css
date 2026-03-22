@@ -1,48 +1,90 @@
-/* style.css — добавь/замени эти правила в конец файла */
+/* =============================================
+   TimeDensity — СОВРЕМЕННЫЙ СТИЛЬ 2026
+   glassmorphism + cosmic glow + анимации
+   ============================================= */
 
 :root {
   --bg: #0a0a0f;
   --text: #e0e0ff;
-  --accent: #a78bfa;     /* фиолетовый основной */
+  --accent: #a78bfa;
   --accent-dark: #7c3aed;
-  --card-bg: rgba(30, 30, 60, 0.4);
-  --border: rgba(167, 139, 250, 0.15);
+  --card-bg: rgba(30, 30, 60, 0.45);
+  --border: rgba(167, 139, 250, 0.2);
+  --glow: 0 0 25px rgba(167, 139, 250, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', system-ui, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
+  overflow-x: hidden;
+  background-image: url('img/galaxy.png'); /* если есть фон */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* Hero улучшение */
-.hero-gradient {
-  background: linear-gradient(to bottom, #0a0a0f, #2d1b4e20, #0a0a0f);
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
 }
 
-/* Карточки разделов */
+.site-header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-img {
+  height: 40px;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #a78bfa, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* КАРТОЧКИ РАЗДЕЛОВ — glassmorphism */
 .level-btn {
   display: block;
-  padding: 1.5rem 2rem;
+  padding: 1.75rem 1.5rem;
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 1rem;
-  backdrop-filter: blur(12px);
+  border-radius: 1.25rem;
+  backdrop-filter: blur(16px);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 500;
   color: var(--text);
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
   text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .level-btn:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(167, 139, 250, 0.25);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: var(--glow);
   border-color: var(--accent);
-  background: rgba(167, 139, 250, 0.08);
+  background: rgba(167, 139, 250, 0.12);
 }
 
 /* Языковые кнопки */
@@ -50,31 +92,70 @@ body {
   background: transparent;
   border: 1px solid var(--border);
   color: var(--text);
-  padding: 0.6rem 1.2rem;
+  padding: 0.65rem 1.4rem;
   border-radius: 9999px;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.lang-btn.active {
+.lang-btn.active,
+.lang-btn:hover {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
+  box-shadow: var(--glow);
 }
 
-/* Контент страниц (для theory.html, consciousness.html и т.д.) */
+/* HERO */
+.hero-gradient {
+  background: linear-gradient(to bottom, #0a0a0f, rgba(45, 27, 78, 0.3), #0a0a0f);
+}
+
+/* СТРАНИЦЫ КОНТЕНТА (consciousness.html и другие) */
 .content {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 1.5rem;
 }
 
-h1, h2, h3 {
-  color: #d1d5ff;
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  background: linear-gradient(to right, #c4b5fd, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 h2 {
-  border-left: 4px solid var(--accent);
-  padding-left: 1rem;
-  margin: 2.5rem 0 1rem;
+  font-size: 1.85rem;
+  color: #c4b5fd;
+  margin: 3rem 0 1rem;
+  padding-left: 1.2rem;
+  border-left: 5px solid var(--accent);
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Кнопки на страницах */
+.level-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .level-btn {
+    padding: 1.4rem 1rem;
+    font-size: 1.05rem;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+  }
 }
