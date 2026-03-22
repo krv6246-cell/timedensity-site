@@ -25,7 +25,7 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.7;
   overflow-x: hidden;
-  background-image: url('img/galaxy.png'); /* если есть фон */
+  background-image: url('img/galaxy.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -63,9 +63,13 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-/* КАРТОЧКИ РАЗДЕЛОВ — glassmorphism */
+/* КАРТОЧКИ РАЗДЕЛОВ — glassmorphism + одинаковая высота */
 .level-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 118px;
   padding: 1.75rem 1.5rem;
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -112,7 +116,7 @@ header {
   background: linear-gradient(to bottom, #0a0a0f, rgba(45, 27, 78, 0.3), #0a0a0f);
 }
 
-/* СТРАНИЦЫ КОНТЕНТА (consciousness.html и другие) */
+/* СТРАНИЦЫ КОНТЕНТА */
 .content {
   max-width: 960px;
   margin: 0 auto;
@@ -141,27 +145,15 @@ p {
   margin-bottom: 1.4rem;
 }
 
-/* Кнопки на страницах */
-.level-btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-}
-
 /* Адаптивность */
 @media (max-width: 768px) {
   .level-btn {
     padding: 1.4rem 1rem;
     font-size: 1.05rem;
+    min-height: 110px;
   }
   
   h1 {
     font-size: 2.8rem;
   }
-}.level-btn {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 120px; /* чтобы все карточки были одинаковые */
 }
