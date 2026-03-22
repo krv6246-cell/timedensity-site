@@ -1,51 +1,58 @@
-consciousness.html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TimeDensity — Сознание и цивилизация</title>
+    
+    <!-- Tailwind (для современного вида) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Твой стиль -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-image: url('img/galaxy.png'); background-size: cover; background-position: center; background-attachment: fixed; margin:0; padding:0; font-family: 'Inter', Arial, sans-serif; color:#ffffff;">
+<body class="bg-[#0a0a0f] text-[#e0e0ff] min-h-screen">
 
     <!-- HEADER (точно как на главной) -->
-    <header class="site-header">
-        <div class="left-block">
-            <img src="img/logo.png" alt="TimeDensity Logo" class="logo-img">
-        </div>
-        <div class="site-title">TimeDensity</div>
-        <div class="lang-switch">
-            <button class="lang-btn active">RU</button>
-            <button class="lang-btn">EN</button>
+    <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="img/logo.png" alt="Logo" class="h-9">
+                <span class="text-3xl font-bold tracking-tight">TimeDensity</span>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="window.location.href='index.html'" class="lang-btn px-6 py-2 rounded-2xl text-sm font-medium">RU</button>
+                <button onclick="window.location.href='index.html'" class="lang-btn px-6 py-2 rounded-2xl text-sm font-medium">EN</button>
+            </div>
         </div>
     </header>
 
-    <div class="page-layout" style="padding: 40px 20px; max-width: 900px; margin: 0 auto;">
-        <h1 style="font-size: 42px; text-align: center; margin: 40px 0 30px; background: linear-gradient(to right, #a78bfa, #ffffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+    <div class="max-w-4xl mx-auto px-6 py-16">
+        <h1 class="text-5xl md:text-6xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 via-indigo-400 to-white bg-clip-text text-transparent">
             TimeDensity в масштабе сознания и цивилизации
         </h1>
 
-        <h2 style="font-size: 28px; margin-top: 50px; color: #c4b5fd;">Развитие личности через плотность времени</h2>
-        <p style="font-size: 19px; line-height: 1.7;">Личность развивается через углубление в собственное поле, синхронизацию частот с другими людьми и внутреннее напряжение, которое кристаллизует ядро. Когда ядро теряет плотность, человек попадает в ложные временные поля — чужие ритмы, ожидания и навязанные смыслы.</p>
+        <h2 class="text-3xl mt-16 mb-6 text-purple-300">Развитие личности через плотность времени</h2>
+        <p class="text-lg leading-relaxed mb-8">Личность развивается через углубление в собственное поле, синхронизацию частот с другими людьми и внутреннее напряжение, которое кристаллизует ядро. Когда ядро теряет плотность, человек попадает в ложные временные поля — чужие ритмы, ожидания и навязанные смыслы.</p>
 
-        <h2 style="font-size: 28px; margin-top: 50px; color: #c4b5fd;">7. Чистота восприятия: природа истины и шума</h2>
-        <p style="font-size: 19px; line-height: 1.7;">Истина по своей природе чиста. Зашумлён не источник, а приёмник — человеческое сознание. В современном мире сознание перегружено чужими мнениями, страхами и сравнениями. Мы часто проверяем не саму идею, а собственное недоверие.</p>
-        <p style="font-size: 19px; line-height: 1.7;">Настоящая истина проявляется только при высокой плотности внимания, когда сознание достаточно тихо и открыто.</p>
+        <h2 class="text-3xl mt-16 mb-6 text-purple-300">7. Чистота восприятия: природа истины и шума</h2>
+        <p class="text-lg leading-relaxed mb-6">Истина по своей природе чиста. Зашумлён не источник, а приёмник — человеческое сознание. В современном мире сознание перегружено чужими мнениями, страхами и сравнениями. Мы часто проверяем не саму идею, а собственное недоверие.</p>
+        <p class="text-lg leading-relaxed mb-8">Настоящая истина проявляется только при высокой плотности внимания, когда сознание достаточно тихо и открыто.</p>
 
-        <h2 style="font-size: 28px; margin-top: 50px; color: #c4b5fd;">8. TimeDensity в масштабе Вселенной и цивилизации</h2>
-        <p style="font-size: 19px; line-height: 1.7;">Вселенная представляет собой единое поле плотности времени. Материя — это устойчивые узлы времени, пространство — его геометрия, галактики — гигантские вихри плотности, а расширение Вселенной — естественное снижение средней плотности времени.</p>
-        <p style="font-size: 19px; line-height: 1.7;">На уровне цивилизации мы наблюдаем глобальную рассинхронизацию временных полей: внешние ритмы подавили внутренние, скорость вытеснила глубину, а шум заглушил исходный код миллионов людей. Это и есть коренная причина современных кризисов, конфликтов и потери смыслов.</p>
+        <h2 class="text-3xl mt-16 mb-6 text-purple-300">8. TimeDensity в масштабе Вселенной и цивилизации</h2>
+        <p class="text-lg leading-relaxed mb-6">Вселенная представляет собой единое поле плотности времени. Материя — это устойчивые узлы времени, пространство — его геометрия, галактики — гигантские вихри плотности, а расширение Вселенной — естественное снижение средней плотности времени.</p>
+        <p class="text-lg leading-relaxed mb-8">На уровне цивилизации мы наблюдаем глобальную рассинхронизацию временных полей: внешние ритмы подавили внутренние, скорость вытеснила глубину, а шум заглушил исходный код миллионов людей. Это и есть коренная причина современных кризисов, конфликтов и потери смыслов.</p>
 
-        <h2 style="font-size: 28px; margin-top: 50px; color: #c4b5fd;">Заключение</h2>
-        <p style="font-size: 22px; line-height: 1.6; font-style: italic; color: #c4b5fd; text-align: center; max-width: 700px; margin: 30px auto;">
+        <h2 class="text-3xl mt-16 mb-6 text-purple-300">Заключение</h2>
+        <p class="text-2xl italic text-center max-w-2xl mx-auto text-purple-200 leading-relaxed">
             Плотное всегда сильнее рыхлого. Правильные структуры времени неизбежно находят друг друга через резонанс.
         </p>
-        <p style="font-size: 19px; line-height: 1.7;">TimeDensity показывает главное: мы не создаём себя, свои идеи и своё будущее заново. Мы просто возвращаемся к своей изначальной структуре — к тому естественному ритму и плотности, которые уже существуют внутри нас и во всей Вселенной. В этом возвращении и заключается ключ к пониманию себя, рождения идей и гармонии с миром.</p>
+        <p class="text-lg leading-relaxed mt-8 text-center">
+            TimeDensity показывает главное: мы не создаём себя, свои идеи и своё будущее заново. Мы просто возвращаемся к своей изначальной структуре — к тому естественному ритму и плотности, которые уже существуют внутри нас и во всей Вселенной. В этом возвращении и заключается ключ к пониманию себя, рождения идей и гармонии с миром.
+        </p>
 
-        <div style="text-align: center; margin-top: 60px;">
-            <a href="index.html" class="level-btn" style="display: inline-block; padding: 14px 32px; font-size: 18px;">← На главную</a>
-            <a href="interpretations.html" class="level-btn" style="display: inline-block; padding: 14px 32px; font-size: 18px; margin-left: 15px;">← К интерпретациям</a>
+        <div class="mt-20 flex flex-wrap gap-4 justify-center">
+            <a href="index.html" class="level-btn px-8 py-4 text-lg">← На главную</a>
+            <a href="interpretations.html" class="level-btn px-8 py-4 text-lg">← К интерпретациям</a>
         </div>
     </div>
 
