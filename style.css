@@ -158,4 +158,10 @@ p {
   h1 {
     font-size: 2.8rem;
   }
+}.level-btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px; /* чтобы все карточки были одинаковые */
 }
