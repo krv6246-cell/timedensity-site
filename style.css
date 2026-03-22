@@ -10,7 +10,6 @@
   --accent-dark: #7c3aed;
   --card-bg: rgba(30, 30, 60, 0.45);
   --border: rgba(167, 139, 250, 0.2);
-  --glow: 0 0 25px rgba(167, 139, 250, 0.4);
 }
 
 * {
@@ -25,10 +24,6 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.7;
   overflow-x: hidden;
-  background-image: url('img/galaxy.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 /* HEADER */
@@ -42,28 +37,7 @@ header {
   padding: 1rem 0;
 }
 
-.site-header {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo-img {
-  height: 40px;
-}
-
-.site-title {
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(to right, #a78bfa, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* КАРТОЧКИ РАЗДЕЛОВ — glassmorphism + одинаковая высота */
+/* КАРТОЧКИ РАЗДЕЛОВ */
 .level-btn {
   display: flex;
   align-items: center;
@@ -86,7 +60,7 @@ header {
 
 .level-btn:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: var(--glow);
+  box-shadow: 0 0 25px rgba(167, 139, 250, 0.4);
   border-color: var(--accent);
   background: rgba(167, 139, 250, 0.12);
 }
@@ -108,12 +82,7 @@ header {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
-  box-shadow: var(--glow);
-}
-
-/* HERO */
-.hero-gradient {
-  background: linear-gradient(to bottom, #0a0a0f, rgba(45, 27, 78, 0.3), #0a0a0f);
+  box-shadow: 0 0 25px rgba(167, 139, 250, 0.4);
 }
 
 /* СТРАНИЦЫ КОНТЕНТА */
@@ -124,8 +93,9 @@ header {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: 2.8rem;
   background: linear-gradient(to right, #c4b5fd, #ffffff);
+  background-clip: text;              /* ← вот это добавлено */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -151,9 +121,5 @@ p {
     padding: 1.4rem 1rem;
     font-size: 1.05rem;
     min-height: 110px;
-  }
-  
-  h1 {
-    font-size: 2.8rem;
   }
 }
