@@ -1,116 +1,182 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- Facebook Pixel (оставляем) -->
-    <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1322133989675325'); fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1322133989675325&ev=PageView&noscript=1"/></noscript>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TimeDensity</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    
-    <!-- === TAILWIND CDN (магия 2026) === -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css"> <!-- твой старый CSS пока оставляем, потом улучшим -->
-
-    <script>
-        tailwind.config = {
-            content: ["./**/*.{html,js}"],
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-                    colors: { primary: '#8b5cf6' }
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TimeDensity</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"/>
+  <link rel="stylesheet" href="style.css"/> <!-- твой текущий style.css -->
 </head>
+<body class="bg-[#0a0a0f] text-[#e0e0ff] min-h-screen overflow-x-hidden">
 
-<body class="bg-[#0a0a0a] text-white overflow-x-hidden">
-    <!-- HEADER -->
-    <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-4">
-                <img src="img/logo.png" alt="Logo" class="h-10">
-                <div class="text-3xl font-bold tracking-tighter">TimeDensity</div>
-            </div>
-            
-            <!-- Language switch -->
-            <div class="flex gap-2">
-                <button onclick="setLang('ru')" id="btnRu" class="lang-btn px-5 py-2 rounded-xl font-medium transition">RU</button>
-                <button onclick="setLang('en')" id="btnEn" class="lang-btn px-5 py-2 rounded-xl font-medium transition">EN</button>
-            </div>
-        </div>
-    </header>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 py-4">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="Logo" class="h-10 w-10"/> <!-- если есть лого, иначе убери -->
+        <span class="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">
+          TimeDensity
+        </span>
+      </div>
 
-    <!-- HERO + НОВЫЙ ТЕКСТ (твоя свежая глава) -->
-    <section class="relative py-24 bg-gradient-to-b from-black via-purple-950/20 to-black">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">
-                TimeDensity
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
-                Мы не создаём себя. Мы возвращаемся к своей изначальной структуре.
-            </p>
-        </div>
-    </section>
-
-    <!-- Разделы (современные карточки) -->
-  <div class="max-w-7xl mx-auto px-6 py-16">
-  <h3 class="text-3xl font-bold mb-10 text-center bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent"><!-- Карточка "Скачать PDF" — полностью в стиле level-btn -->
-<a href="consciousness.pdf" download class="level-btn" aria-label="Скачать PDF модели TimeDensity">
-  <div class="flex flex-col items-center justify-center gap-3">
-    <!-- Иконка (эмодзи + размер как у других) -->
-    <span class="text-5xl md:text-6xl drop-shadow-lg">📄</span>
-    
-    <!-- Основной текст -->
-    <span class="text-xl md:text-2xl font-semibold">Скачать PDF</span>
-    
-    <!-- Подпись (как у других карточек, если они имеют описание) -->
-    <span class="text-sm md:text-base text-gray-400 opacity-80">
-      Вся модель TimeDensity
-    </span>
-  </div>
-</a>
-    Разделы TimeDensity
-  </h3>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-        
-        <!-- Текст на RU -->
-        <h3 class="text-xl font-semibold text-purple-300 mb-2 ru-text">Скачать PDF</h3>
-        <p class="text-gray-400 text-sm ru-text">Вся модель TimeDensity в удобном формате</p>
-        
-        <!-- Текст на EN (если переключатель уже переводит, то используй data-атрибуты или JS) -->
-        <h3 class="text-xl font-semibold text-purple-300 mb-2 en-text hidden">Download PDF</h3>
-        <p class="text-gray-400 text-sm en-text hidden">Full TimeDensity model in printable format</p>
+      <div class="flex gap-3">
+        <button class="lang-btn active">RU</button>
+        <button class="lang-btn">EN</button>
+      </div>
     </div>
-    
-    <!-- Ссылка на PDF (замени на реальный путь) -->
-    <a href="consciousness.pdf" download class="absolute inset-0" aria-label="Download PDF"></a>
-    <!-- Или если PDF генерируется динамически: onclick="downloadAsPDF()" -->
-</div>
-    <a href="theory.html" class="level-btn">🌑 Теория</a>
-    <a href="model.html" class="level-btn">🪶 Модель</a>
-    <a href="cosmology.html" class="level-btn">🪐 Космология</a>
-    <a href="darkmatter.html" class="level-btn">🌌 Тёмная материя</a>
-    <a href="mathematics.html" class="level-btn">🔢 Математика</a>
-    <a href="interactions.html" class="level-btn">⚛️ Взаимодействия</a>
-    <a href="interpretations.html" class="level-btn">🧠 Интерпретации</a>
-    <a href="temporal-foam.html" class="level-btn">🌀 Принцип временной пены</a>
-    <a href="quantum-time.html" class="level-btn">🔬 Квантовая структура времени</a>
-    
-    <!-- Новая карточка -->
-    <a href="consciousness.html" class="level-btn">🌱 Сознание и цивилизация</a>
+  </header>
 
-    <a href="https://krv6246-cell.github.io/timedensity-faq/" class="level-btn">❓ FAQ</a>
-</div>
-   
+  <!-- Основной контент -->
+  <main class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h1 class="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-300 bg-clip-text text-transparent">
+        Разделы TimeDensity
+      </h1>
 
-    <script src="script.js"></script>
+      <!-- Сетка карточек -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        
+        <!-- Скачать PDF -->
+        <a href="timedensity-model.pdf" download class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">📄</span>
+            <span class="text-xl md:text-2xl font-semibold">Скачать PDF</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Вся модель TimeDensity
+            </span>
+          </div>
+        </a>
+
+        <!-- Теория -->
+        <a href="theory.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">●</span>
+            <span class="text-xl md:text-2xl font-semibold">Теория</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Основные принципы
+            </span>
+          </div>
+        </a>
+
+        <!-- Модель -->
+        <a href="model.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">🪶</span>
+            <span class="text-xl md:text-2xl font-semibold">Модель</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Рабочая модель
+            </span>
+          </div>
+        </a>
+
+        <!-- Космология -->
+        <a href="cosmology.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">🔥</span>
+            <span class="text-xl md:text-2xl font-semibold">Космология</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Вселенная и время
+            </span>
+          </div>
+        </a>
+
+        <!-- Тёмная материя -->
+        <a href="dark-matter.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">🌑</span>
+            <span class="text-xl md:text-2xl font-semibold">Тёмная материя</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Невидимая масса
+            </span>
+          </div>
+        </a>
+
+        <!-- Математика -->
+        <a href="mathematics.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">♾️</span>
+            <span class="text-xl md:text-2xl font-semibold">Математика</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Формулы и расчёты
+            </span>
+          </div>
+        </a>
+
+        <!-- Взаимодействия -->
+        <a href="interactions.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">✨</span>
+            <span class="text-xl md:text-2xl font-semibold">Взаимодействия</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Связи и резонансы
+            </span>
+          </div>
+        </a>
+
+        <!-- Интерпретации -->
+        <a href="interpretations.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">💭</span>
+            <span class="text-xl md:text-2xl font-semibold">Интерпретации</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Разные взгляды
+            </span>
+          </div>
+        </a>
+
+        <!-- Принцип временной пены -->
+        <a href="time-foam.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">🌀</span>
+            <span class="text-xl md:text-2xl font-semibold">Принцип временной пены</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Ключевой механизм
+            </span>
+          </div>
+        </a>
+
+        <!-- Квантовая структура времени -->
+        <a href="quantum-time.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">⚛️</span>
+            <span class="text-xl md:text-2xl font-semibold">Квантовая структура времени</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Квантовая основа
+            </span>
+          </div>
+        </a>
+
+        <!-- Сознание и цивилизация -->
+        <a href="consciousness.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">🌱</span>
+            <span class="text-xl md:text-2xl font-semibold">Сознание и цивилизация</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Развитие личности
+            </span>
+          </div>
+        </a>
+
+        <!-- FAQ -->
+        <a href="faq.html" class="level-btn">
+          <div class="flex flex-col items-center justify-center gap-3 h-full">
+            <span class="text-5xl md:text-6xl drop-shadow-lg">?</span>
+            <span class="text-xl md:text-2xl font-semibold">FAQ</span>
+            <span class="text-sm md:text-base text-gray-400 opacity-80 mt-1">
+              Часто задаваемые вопросы
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал, если нужен -->
+  <footer class="py-8 text-center text-gray-500 text-sm border-t border-white/10 mt-12">
+    © 2026 TimeDensity
+  </footer>
+
+  <script src="script.js"></script> <!-- если есть js для переключения языка -->
 </body>
 </html>
