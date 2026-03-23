@@ -67,22 +67,31 @@ header .flex {
 
 /* КАРТОЧКИ (level-btn) */
 .level-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  min-height: 140px;                     /* чуть выше, чтобы было место для описания */
-  padding: 1.5rem 1.25rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 1.25rem;
-  backdrop-filter: blur(16px);
-  text-align: center;
-  text-decoration: none;
-  color: var(--text);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: var(--shadow);
-  cursor: pointer;
+  min-height: 120px;                     /* было 140px → уменьшили */
+  padding: 1.25rem 1rem;                 /* было 1.5rem 1.25rem → меньше */
+}
+
+.level-btn span.text-6xl {
+  font-size: 4rem;                       /* было 6xl ≈ 5rem → 4rem */
+}
+
+.level-btn .text-xl {
+  font-size: 1.125rem;                   /* было 1.25rem → 1.125rem */
+}
+
+.level-btn .text-sm {
+  font-size: 0.8125rem;                  /* было 0.875rem → чуть меньше */
+}
+
+/* Для мобильных — ещё компактнее */
+@media (max-width: 768px) {
+  .level-btn {
+    min-height: 110px;
+    padding: 1rem 0.8rem;
+  }
+  .level-btn span.text-6xl {
+    font-size: 3.5rem;
+  }
 }
 
 .level-btn:hover {
