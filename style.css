@@ -122,4 +122,22 @@ p {
     font-size: 1.05rem;
     min-height: 110px;
   }
+}/* Сетка карточек — 3 колонки на десктопе */
+.grid-sections {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 колонка на мобильных */
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {  /* sm */
+  .grid-sections {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшете */
+  }
+}
+
+@media (min-width: 1024px) {  /* lg */
+  .grid-sections {
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки на десктопе */
+    gap: 2rem;
+  }
 }
