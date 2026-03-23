@@ -10,6 +10,8 @@
   --accent-dark: #7c3aed;
   --card-bg: rgba(30, 30, 60, 0.45);
   --border: rgba(167, 139, 250, 0.2);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glow: 0 0 25px rgba(167, 139, 250, 0.4);
 }
 
 * {
@@ -37,32 +39,83 @@ header {
   padding: 1rem 0;
 }
 
-/* КАРТОЧКИ РАЗДЕЛОВ */
+header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* СЕТКА КАРТОЧЕК */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;           /* 1 колонка по умолчанию */
+  gap: 1.5rem;                          /* gap-6 */
+}
+
+@media (min-width: 640px) {             /* sm */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {            /* lg */
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;                          /* md:gap-8 */
+  }
+}
+
+/* КАРТОЧКИ (level-btn) */
 .level-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  min-height: 118px;
-  padding: 1.75rem 1.5rem;
+  min-height: 140px;                     /* чуть выше, чтобы было место для описания */
+  padding: 1.5rem 1.25rem;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
   backdrop-filter: blur(16px);
   text-align: center;
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: var(--text);
   text-decoration: none;
+  color: var(--text);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 .level-btn:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 25px rgba(167, 139, 250, 0.4);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: var(--glow);
   border-color: var(--accent);
-  background: rgba(167, 139, 250, 0.12);
+  background: rgba(167, 139, 250, 0.08);
+}
+
+/* ВНУТРЕННЕЕ СОДЕРЖИМОЕ КАРТОЧКИ */
+.level-btn .flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 100%;
+}
+
+.level-btn span.text-6xl {
+  font-size: 4rem;                      /* 6xl */
+  line-height: 1;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
+}
+
+.level-btn .text-xl {
+  font-size: 1.25rem;                   /* 2xl */
+  font-weight: 600;
+}
+
+.level-btn .text-sm {
+  font-size: 0.875rem;
+  opacity: 0.8;
 }
 
 /* Языковые кнопки */
@@ -82,62 +135,27 @@ header {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
-  box-shadow: 0 0 25px rgba(167, 139, 250, 0.4);
+  box-shadow: var(--glow);
 }
 
-/* СТРАНИЦЫ КОНТЕНТА */
-.content {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem;
-}
-
+/* ЗАГОЛОВОК */
 h1 {
   font-size: 2.8rem;
   background: linear-gradient(to right, #c4b5fd, #ffffff);
-  background-clip: text;              /* ← вот это добавлено */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
-h2 {
-  font-size: 1.85rem;
-  color: #c4b5fd;
-  margin: 3rem 0 1rem;
-  padding-left: 1.2rem;
-  border-left: 5px solid var(--accent);
-}
-
-p {
-  font-size: 1.1rem;
-  margin-bottom: 1.4rem;
-}
-
-/* Адаптивность */
+/* Адаптивность (дополнительно) */
 @media (max-width: 768px) {
   .level-btn {
-    padding: 1.4rem 1rem;
-    font-size: 1.05rem;
-    min-height: 110px;
+    padding: 1.25rem 1rem;
+    min-height: 130px;
   }
-}/* Сетка карточек — 3 колонки на десктопе */
-.grid-sections {
-  display: grid;
-  grid-template-columns: 1fr; /* 1 колонка на мобильных */
-  gap: 1.5rem;
-}
-
-@media (min-width: 640px) {  /* sm */
-  .grid-sections {
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшете */
-  }
-}
-
-@media (min-width: 1024px) {  /* lg */
-  .grid-sections {
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки на десктопе */
-    gap: 2rem;
+  .level-btn span.text-6xl {
+    font-size: 3.5rem;
   }
 }
