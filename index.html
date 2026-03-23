@@ -65,7 +65,25 @@
   <h3 class="text-3xl font-bold mb-10 text-center bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
     Разделы TimeDensity
   </h3>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"><!-- Новая карточка PDF — вставь после карточки "Сознание и цивилизация" или в конец grid -->
+<div class="group relative bg-black/60 backdrop-blur-md rounded-2xl p-6 border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-[1.02] cursor-pointer shadow-xl">
+    <div class="flex flex-col items-center justify-center h-full text-center">
+        <!-- Эмодзи или иконка (можно SVG для PDF) -->
+        <span class="text-5xl mb-4">📄</span> <!-- или 📥, или 📘 -->
+        
+        <!-- Текст на RU -->
+        <h3 class="text-xl font-semibold text-purple-300 mb-2 ru-text">Скачать PDF</h3>
+        <p class="text-gray-400 text-sm ru-text">Вся модель TimeDensity в удобном формате</p>
+        
+        <!-- Текст на EN (если переключатель уже переводит, то используй data-атрибуты или JS) -->
+        <h3 class="text-xl font-semibold text-purple-300 mb-2 en-text hidden">Download PDF</h3>
+        <p class="text-gray-400 text-sm en-text hidden">Full TimeDensity model in printable format</p>
+    </div>
+    
+    <!-- Ссылка на PDF (замени на реальный путь) -->
+    <a href="consciousness.pdf" download class="absolute inset-0" aria-label="Download PDF"></a>
+    <!-- Или если PDF генерируется динамически: onclick="downloadAsPDF()" -->
+</div>
     <a href="theory.html" class="level-btn">🌑 Теория</a>
     <a href="model.html" class="level-btn">🪶 Модель</a>
     <a href="cosmology.html" class="level-btn">🪐 Космология</a>
