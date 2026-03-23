@@ -195,7 +195,26 @@
       const saved = localStorage.getItem('lang') || 'ru';
       switchLang(saved);
     });
-  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const ruBtn = document.querySelector('[data-lang="ru"]');
+    const enBtn = document.querySelector('[data-lang="en"]');
+
+    function switchLang(lang) {
+      document.body.classList.remove('lang-ru', 'lang-en');
+      document.body.classList.add(`lang-${lang}`);
+      ruBtn.classList.toggle('active', lang === 'ru');
+      enBtn.classList.toggle('active', lang === 'en');
+      localStorage.setItem('lang', lang);
+    }
+
+    ruBtn.addEventListener('click', () => switchLang('ru'));
+    enBtn.addEventListener('click', () => switchLang('en'));
+
+    const saved = localStorage.getItem('lang') || 'ru';
+    switchLang(saved);
+  });
+</script>
 
 </body>
 </html>
