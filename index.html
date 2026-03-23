@@ -5,19 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TimeDensity</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"/>
-  <link rel="stylesheet" href="style.css"/> <!-- твой текущий style.css -->
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body class="bg-[#0a0a0f] text-[#e0e0ff] min-h-screen overflow-x-hidden">
 
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 py-4">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <img src="logo.png" alt="Logo" class="h-10 w-10"/> <!-- если есть лого, иначе убери -->
-        <span class="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">
-          TimeDensity
-        </span>
-      </div>
+      <span class="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">
+        TimeDensity
+      </span>
 
       <div class="flex gap-3">
         <button class="lang-btn active">RU</button>
@@ -26,16 +23,16 @@
     </div>
   </header>
 
-  <!-- Основной контент -->
+  <!-- Main -->
   <main class="py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6">
-      <h1 class="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-300 bg-clip-text text-transparent">
+      <h1 class="text-4xl md:text-6xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-300 bg-clip-text text-transparent">
         Разделы TimeDensity
       </h1>
 
-      <!-- Сетка карточек -->
+      <!-- Сетка карточек — 3 колонки на десктопе -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        
+
         <!-- Скачать PDF -->
         <a href="timedensity-model.pdf" download class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
@@ -172,11 +169,6 @@
     </div>
   </main>
 
-  <!-- Подвал, если нужен -->
-  <footer class="py-8 text-center text-gray-500 text-sm border-t border-white/10 mt-12">
-    © 2026 TimeDensity
-  </footer>
-
-  <script src="script.js"></script> <!-- если есть js для переключения языка -->
+  <script src="script.js"></script>
 </body>
 </html>
