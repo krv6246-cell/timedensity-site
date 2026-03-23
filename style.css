@@ -8,10 +8,10 @@
   --text: #e0e0ff;
   --accent: #a78bfa;
   --accent-dark: #7c3aed;
-  --card-bg: rgba(30, 30, 60, 0.45);
-  --border: rgba(167, 139, 250, 0.2);
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --glow: 0 0 25px rgba(167, 139, 250, 0.4);
+  --card-bg: rgba(30, 30, 60, 0.65); /* чуть плотнее, чтобы текст читался на фоне */
+  --border: rgba(167, 139, 250, 0.3);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --glow: 0 0 25px rgba(167, 139, 250, 0.35);
 }
 
 * {
@@ -19,19 +19,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background: linear-gradient(to bottom, #0f001a 0%, #1a0d2e 40%, #2a1a3f 70%, #0a0a0f 100%);
+  background: 
+    linear-gradient(to bottom, rgba(10, 10, 15, 0.92) 0%, rgba(10, 10, 15, 0.88) 100%),
+    url('https://i.imgur.com/a/y6v1npI.jpg') center/cover no-repeat fixed;
   background-attachment: fixed;
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
+/* Оверлей-картинка (поверх градиента, но под контентом) */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background: url('https://i.imgur.com/твоя-картина.jpg') center/cover no-repeat;
+  background: url('https://i.imgur.com/a/y6v1npI.jpg') center/cover no-repeat;
   opacity: 0.12;
   mix-blend-mode: screen;
   pointer-events: none;
+  z-index: -1;
 }
 
 /* HEADER */
@@ -54,57 +64,47 @@ header .flex {
 /* СЕТКА КАРТОЧЕК */
 .grid {
   display: grid;
-  grid-template-columns: 1fr;           /* 1 колонка по умолчанию */
-  gap: 1.5rem;                          /* gap-6 */
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-@media (min-width: 640px) {             /* sm */
+@media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1024px) {            /* lg */
+@media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;                          /* md:gap-8 */
+    gap: 2rem;
   }
 }
 
 /* КАРТОЧКИ (level-btn) */
 .level-btn {
-  min-height: 120px;                     /* было 140px → уменьшили */
-  padding: 1.25rem 1rem;                 /* было 1.5rem 1.25rem → меньше */
-}
-
-.level-btn span.text-6xl {
-  font-size: 4rem;                       /* было 6xl ≈ 5rem → 4rem */
-}
-
-.level-btn .text-xl {
-  font-size: 1.125rem;                   /* было 1.25rem → 1.125rem */
-}
-
-.level-btn .text-sm {
-  font-size: 0.8125rem;                  /* было 0.875rem → чуть меньше */
-}
-
-/* Для мобильных — ещё компактнее */
-@media (max-width: 768px) {
-  .level-btn {
-    min-height: 110px;
-    padding: 1rem 0.8rem;
-  }
-  .level-btn span.text-6xl {
-    font-size: 3.5rem;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+  padding: 1.25rem 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  backdrop-filter: blur(16px);
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 .level-btn:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: var(--glow);
   border-color: var(--accent);
-  background: rgba(167, 139, 250, 0.08);
+  background: rgba(167, 139, 250, 0.12);
 }
 
 /* ВНУТРЕННЕЕ СОДЕРЖИМОЕ КАРТОЧКИ */
@@ -114,22 +114,21 @@ header .flex {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  height: 100%;
 }
 
 .level-btn span.text-6xl {
-  font-size: 4rem;                      /* 6xl */
+  font-size: 4rem;
   line-height: 1;
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
 }
 
 .level-btn .text-xl {
-  font-size: 1.25rem;                   /* 2xl */
+  font-size: 1.125rem;
   font-weight: 600;
 }
 
 .level-btn .text-sm {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   opacity: 0.8;
 }
 
@@ -164,18 +163,22 @@ h1 {
   margin-bottom: 3rem;
 }
 
-/* Адаптивность (дополнительно) */
+/* Переключение языка */
+.lang-ru [data-lang="en"],
+.lang-en [data-lang="ru"] {
+  display: none !important;
+}
+
+/* Адаптивность */
 @media (max-width: 768px) {
   .level-btn {
-    padding: 1.25rem 1rem;
-    min-height: 130px;
+    padding: 1rem 0.8rem;
+    min-height: 120px;
   }
   .level-btn span.text-6xl {
     font-size: 3.5rem;
   }
-}
-
-.lang-ru [data-lang="en"],
-.lang-en [data-lang="ru"] {
-  display: none !important;
+  h1 {
+    font-size: 2.2rem;
+  }
 }
