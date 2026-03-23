@@ -37,7 +37,7 @@ body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background: url('https://i.imgur.com/a/y6v1npI.jpg') center/cover no-repeat;
+  background: url('img/DALI.jpg') center/cover no-repeat;
   opacity: 0.12;
   mix-blend-mode: screen;
   pointer-events: none;
