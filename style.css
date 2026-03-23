@@ -167,4 +167,7 @@ h1 {
   .level-btn span.text-6xl {
     font-size: 3.5rem;
   }
+}.lang-ru [data-lang="en"],
+.lang-en [data-lang="ru"] {
+  display: none !important;
 }
