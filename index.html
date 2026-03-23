@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-[#0a0a0f] text-[#e0e0ff] min-h-screen overflow-x-hidden">
+<body class="bg-[#0a0a0f] text-[#e0e0ff] min-h-screen overflow-x-hidden lang-ru">
 
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 py-4">
@@ -17,8 +17,8 @@
       </span>
 
       <div class="flex gap-3">
-        <button class="lang-btn active">RU</button>
-        <button class="lang-btn">EN</button>
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </div>
   </header>
@@ -27,18 +27,21 @@
   <main class="py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6">
       <h1 class="text-4xl md:text-6xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-300 bg-clip-text text-transparent">
-        Разделы TimeDensity
+        <span data-lang="ru">Разделы TimeDensity</span>
+        <span data-lang="en" style="display:none">TimeDensity Sections</span>
       </h1>
 
-      <!-- Сетка карточек — 3 колонки на десктопе -->
+      <!-- Сетка карточек -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 py-8">
-        
+
         <!-- PDF -->
         <a href="timedensity-model.pdf" download class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">📄</span>
-            <span class="text-xl font-semibold">Скачать PDF</span>
-            <span class="text-sm text-gray-400 mt-1">Вся модель TimeDensity</span>
+            <span class="text-xl font-semibold" data-lang="ru">Скачать PDF</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Download PDF</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Вся модель TimeDensity</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Full TimeDensity model</span>
           </div>
         </a>
 
@@ -46,8 +49,10 @@
         <a href="theory.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">●</span>
-            <span class="text-xl font-semibold">Теория</span>
-            <span class="text-sm text-gray-400 mt-1">Основные принципы</span>
+            <span class="text-xl font-semibold" data-lang="ru">Теория</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Theory</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Основные принципы</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Core principles</span>
           </div>
         </a>
 
@@ -55,8 +60,10 @@
         <a href="model.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">🪶</span>
-            <span class="text-xl font-semibold">Модель</span>
-            <span class="text-sm text-gray-400 mt-1">Рабочая модель</span>
+            <span class="text-xl font-semibold" data-lang="ru">Модель</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Model</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Рабочая модель</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Working model</span>
           </div>
         </a>
 
@@ -64,8 +71,10 @@
         <a href="cosmology.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">🔥</span>
-            <span class="text-xl font-semibold">Космология</span>
-            <span class="text-sm text-gray-400 mt-1">Вселенная и время</span>
+            <span class="text-xl font-semibold" data-lang="ru">Космология</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Cosmology</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Вселенная и время</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Universe and time</span>
           </div>
         </a>
 
@@ -73,8 +82,10 @@
         <a href="dark-matter.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">🌑</span>
-            <span class="text-xl font-semibold">Тёмная материя</span>
-            <span class="text-sm text-gray-400 mt-1">Невидимая масса</span>
+            <span class="text-xl font-semibold" data-lang="ru">Тёмная материя</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Dark Matter</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Невидимая масса</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Invisible mass</span>
           </div>
         </a>
 
@@ -82,8 +93,10 @@
         <a href="mathematics.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">♾️</span>
-            <span class="text-xl font-semibold">Математика</span>
-            <span class="text-sm text-gray-400 mt-1">Формулы и расчёты</span>
+            <span class="text-xl font-semibold" data-lang="ru">Математика</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Mathematics</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Формулы и расчёты</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Formulas and calculations</span>
           </div>
         </a>
 
@@ -91,8 +104,10 @@
         <a href="interactions.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">✨</span>
-            <span class="text-xl font-semibold">Взаимодействия</span>
-            <span class="text-sm text-gray-400 mt-1">Связи и резонансы</span>
+            <span class="text-xl font-semibold" data-lang="ru">Взаимодействия</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Interactions</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Связи и резонансы</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Connections and resonances</span>
           </div>
         </a>
 
@@ -100,8 +115,10 @@
         <a href="interpretations.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">💭</span>
-            <span class="text-xl font-semibold">Интерпретации</span>
-            <span class="text-sm text-gray-400 mt-1">Разные взгляды</span>
+            <span class="text-xl font-semibold" data-lang="ru">Интерпретации</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Interpretations</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Разные взгляды</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Different views</span>
           </div>
         </a>
 
@@ -109,8 +126,10 @@
         <a href="time-foam.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">🌀</span>
-            <span class="text-xl font-semibold">Принцип временной пены</span>
-            <span class="text-sm text-gray-400 mt-1">Ключевой механизм</span>
+            <span class="text-xl font-semibold" data-lang="ru">Принцип временной пены</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Time Foam Principle</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Ключевой механизм</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Key mechanism</span>
           </div>
         </a>
 
@@ -118,8 +137,10 @@
         <a href="quantum-time.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">⚛️</span>
-            <span class="text-xl font-semibold">Квантовая структура времени</span>
-            <span class="text-sm text-gray-400 mt-1">Квантовая основа</span>
+            <span class="text-xl font-semibold" data-lang="ru">Квантовая структура времени</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Quantum Time Structure</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Квантовая основа</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Quantum foundation</span>
           </div>
         </a>
 
@@ -127,8 +148,10 @@
         <a href="consciousness.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">🌱</span>
-            <span class="text-xl font-semibold">Сознание и цивилизация</span>
-            <span class="text-sm text-gray-400 mt-1">Развитие личности</span>
+            <span class="text-xl font-semibold" data-lang="ru">Сознание и цивилизация</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">Consciousness and Civilization</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Развитие личности</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Personality development</span>
           </div>
         </a>
 
@@ -136,8 +159,10 @@
         <a href="faq.html" class="level-btn">
           <div class="flex flex-col items-center justify-center gap-3 h-full">
             <span class="text-6xl">?</span>
-            <span class="text-xl font-semibold">FAQ</span>
-            <span class="text-sm text-gray-400 mt-1">Часто задаваемые вопросы</span>
+            <span class="text-xl font-semibold" data-lang="ru">FAQ</span>
+            <span class="text-xl font-semibold" data-lang="en" style="display:none">FAQ</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="ru">Часто задаваемые вопросы</span>
+            <span class="text-sm text-gray-400 mt-1" data-lang="en" style="display:none">Frequently asked questions</span>
           </div>
         </a>
 
@@ -145,6 +170,32 @@
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <!-- Script для переключения языка -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.lang-btn');
+      const ruBtn = buttons[0];
+      const enBtn = buttons[1];
+
+      function switchLang(lang) {
+        document.documentElement.lang = lang;
+        document.body.classList.remove('lang-ru', 'lang-en');
+        document.body.classList.add(`lang-${lang}`);
+
+        ruBtn.classList.toggle('active', lang === 'ru');
+        enBtn.classList.toggle('active', lang === 'en');
+
+        localStorage.setItem('lang', lang);
+      }
+
+      ruBtn.addEventListener('click', () => switchLang('ru'));
+      enBtn.addEventListener('click', () => switchLang('en'));
+
+      // Восстановление сохранённого языка или RU по умолчанию
+      const saved = localStorage.getItem('lang') || 'ru';
+      switchLang(saved);
+    });
+  </script>
+
 </body>
 </html>
