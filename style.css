@@ -170,4 +170,5 @@ h1 {
 }.lang-ru [data-lang="en"],
 .lang-en [data-lang="ru"] {
   display: none !important;
-}
+}<button class="lang-btn active" data-lang="ru">RU</button>
+<button class="lang-btn" data-lang="en">EN</button>
